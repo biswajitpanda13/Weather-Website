@@ -1,4 +1,4 @@
-const apiKey = "0e0f1feb37024f52b98170823251708"; // your API key
+const apiKey = "847d42e0fef841c8b3c184110251708"
 const btn = document.getElementById("getWeather");
 
 btn.addEventListener("click", () => {
@@ -8,7 +8,7 @@ btn.addEventListener("click", () => {
     return;
   }
 
-  fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`)
+  fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`)
     .then(response => response.json())
     .then(data => {
       document.getElementById("cityName").textContent = `${data.location.name}, ${data.location.country}`;
